@@ -23,4 +23,11 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - run: npm test
+
+    on:
+      push:
+        branches: [ main, develop ]  # Trigger on pushes to additional branches
+      pull_request:
+        branches: [ main ]
+    
  
